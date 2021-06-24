@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+}
+
+.wrapper {
+    text-align: center;
+    color: red;
+    font-size: 19px;
+}
