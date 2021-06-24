@@ -5,36 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Comics</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="{{ route('home') }}">Torna alla home</a></li>
-                <li><a href="{{ route('comics.index') }}">Tutti i fumetti</a></li>
-                <li><a href="{{ route('comics.create') }}">Aggiungi fumetto</a></li>
+    <body>
+        <div class="wrapper">
+            <nav>
+                    <ul>
+                        <li><a href="{{ route('home') }}">Home Page</a></li>
 
+                        <li><a href="{{ route('comics.create') }}">Add Comic</a></li>
+
+                        <li><a href="{{ route('comics.index') }}">Show All Dc Comics</a></li>
+                    
+                    </ul>
+                </nav>
+            </div>
             
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-
-    <ol>
-    
-    @foreach($comics as $comic)
-
-        <li>
-            <a href="{{ route('comics.show', ['id' => $comic->id]) }}">{{ $comic->title }}</a>
-        </li>
+        <div class="wrapper_add">
+                @foreach($comics as $comic)
+                <ol>
+                    <li>
+                        <a href="{{ route('comics.show', ['id' => $comic->id]) }}">{{ $comic->title }}</a>
+                    </li>
+            </ol>
+                @endforeach
+        </div>
         
-    @endforeach
-    </ol>
-    
-    
-    
-    </main>
-</body>
+    </body>
 </html>
