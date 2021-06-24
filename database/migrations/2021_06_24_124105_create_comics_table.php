@@ -15,16 +15,17 @@ class CreateComicsTable extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->varchar('title', 200);
-            $table->longText('description')->nullable();
+            $table->char('title', 200);
+            $table->char('series', 100)->nullable();
             $table->mediumText('thumb')->nullable();
             $table->float('price', 5, 2)->nullable();
-            $table->char('series', 100)->nullable();
+            $table->char('type', 50)->nullable($value);
             $table->date('sale_date')->nullable();
-            $table->char('type', 30)->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *

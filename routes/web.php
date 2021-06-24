@@ -12,22 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', 'HomeController@index')->name('welcome');
-
-
-
-// Route::get("/comics", "HomeController@index")->name("comics.index");
-
-// Route::post("/comics", "HomeController@store")->name("comics.store");
-
-// Route::get("/comics/create", "HomeController@create")->name("comics.create");
-
-// Route::get("/comics/{user}", "HomeController@show")->name("comics.show");
-
-
-// //Route::resource("/comics", "HomeController");
-
-Route::get('/', 'HomeController@index');
-
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/comics', 'ComicController@index')->name('comics.index');
+Route::get('/comics/create', 'ComicController@create')->name('comics.create');
+Route::post('/comics/store', 'ComicController@store')->name('comics.store');
+Route::get('/comics/comic/{id}', 'ComicController@show')->name('comics.show');
