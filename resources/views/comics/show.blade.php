@@ -37,7 +37,16 @@
         </ul>
 
         <div class="wrap_edit">
-            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Comic Modify</a>
+
+            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Comic Modify</a>.
+            
+            <form action="{{ route('comics.destroy', ['id' => $comic->id]) }}" method="post">
+            @csrf
+            @method('DELETE')
+    
+            <input type="submit" value="Delete Comic">
+    
+            </form>
         </div>
     </div>    
     

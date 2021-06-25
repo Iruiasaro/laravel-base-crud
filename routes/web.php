@@ -25,3 +25,5 @@ Route::get('/comics/comic/{id}', 'ComicController@show')->name('comics.show');
 Route::get('/comics/{id}/edit', 'ComicController@edit')->name('comics.edit');
 
 Route::match(["PUT", "PATCH"], '/comics/{id}/update', 'ComicController@update')->name('comics.update');
+
+Route::delete('/comics/{id}', 'ComicController@destroy')->name('comics.destroy');
