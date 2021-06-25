@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>Edit</title>
+    <title>Edit Comic</title>
 </head>
 <body>
     <div class="wrapper">
@@ -20,34 +20,34 @@
             </ul>
         </nav>
 
-    <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
-    @csrf
-    @method('PUT')
+        <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
+        @csrf
+        @method('PUT')
 
-    <span>Title</span>
-    <input type="text" name="title" id="title"><br>
+        <span>Title</span>
+        <input type="text" name="title" id="title" value="{{ $comic->title}}"><br>
 
-    <span>Description</span>
-    <input type="text" name="description" id="description"><br>
+        <span>Description</span>
+        <input type="text" name="description" id="description" value="{{ $comic->description}}"><br>
 
-    <span>Thumb</span>
-    <input type="text" name="thumb" id="thumb"><br>
+        <span>Thumb</span>
+        <input type="text" name="thumb" id="thumb" value="{{ $comic->thumb}}"><br>
 
-    <span>Price</span>
-    <input type="number" name="price" id="price"><br>
+        <span>Price</span>
+        <input type="number" name="price" id="price" value="{{ $comic->price}}"><br>
 
-    <span>Series</span>
-    <input type="text" name="series" id="series"><br>
+        <span>Series</span>
+        <input type="text" name="series" id="series" value="{{ $comic->series}}"><br>
 
-    <span>Sale_Date</span>
-    <input type="date" name="sale_date" id="sale_date"><br>
+        <span>Sale_Date</span>
+        <input type="date" name="sale_date" id="sale_date" value="{{ $comic->sale_date}}"><br>
 
-    <span>Type</span>
-    <input type="text" name="type" id="type"><br>
+        <span>Type</span>
+        <input type="text" name="type" id="type" value="{{ $comic->type}}"><br>
 
-    <input type="submit" value="Modify">
+        <input type="submit" value="Save Modify">
 
-    </form>
+        </form>
     </div>
     
 

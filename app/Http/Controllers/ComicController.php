@@ -88,7 +88,21 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            "title" => "required|max:255",
+            "series" => "max:100",
+            "price" => "numeric|max:5",
+            "sale_date" => "date",
+            "type" => "max:20",
+        ]);
+
+        $comic = Comic::findorFail($id);
+
+        $formData = $request->all();
+
+        $comic->update($formData);
+        
+        return redirect()->route('comics.show', ['id' => $id]);
     }
 
     /**
