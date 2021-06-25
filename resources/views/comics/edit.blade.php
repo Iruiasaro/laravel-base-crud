@@ -20,6 +20,9 @@
             </ul>
         </nav>
 
+        @include('partials.components.errors')
+
+
         <form action="{{ route('comics.update', ['id' => $comic->id]) }}" method="post">
         @csrf
         @method('PUT')

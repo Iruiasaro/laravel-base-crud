@@ -10,7 +10,13 @@
 <body>
 
     <div class="wrapper">
-        <h2>Add Your Comic</h2>
+
+        <li><a href="{{ route('home') }}">Back To Home</a></li>
+
+        <h4>Add Your Comic</h4>
+
+
+        @include('partials.components.errors')
 
         <form action="{{ route('comics.store') }}" method="post">
         @csrf
@@ -36,7 +42,7 @@
         <span>Type</span>
         <input type="text" name="type" id="type"><br>
 
-        <input type="submit" value="Add_Comics">
+        <input type="submit" value="Add Comic">
         
         </form>
 

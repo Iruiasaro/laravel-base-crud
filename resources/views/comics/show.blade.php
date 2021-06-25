@@ -14,11 +14,6 @@
 
                 <li><a href="{{ route('home') }}">Back To Home Page</a></li>
 
-                {{-- <li><a href="{{ route('comics.create') }}">Add Comic</a></li>
-
-                <li><a href="{{ route('comics.index') }}">Show All Dc Comics</a></li> --}}
-
-            
             </ul>
         </nav>
 </div>
@@ -37,9 +32,11 @@
         </ul>
 
         <div class="wrap_edit">
+        
+            <button>
+            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Comic Modify</a>
+            </button>
 
-            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Comic Modify</a>.
-            
             <form action="{{ route('comics.destroy', ['id' => $comic->id]) }}" method="post">
             @csrf
             @method('DELETE')

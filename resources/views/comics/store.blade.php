@@ -17,7 +17,6 @@
                 <li><a href="{{ route('comics.create') }}">Add Comic</a></li>
 
                 <li><a href="{{ route('comics.index') }}">Show All Dc Comics</a></li>
-            
             </ul>
         </nav>
 </div>

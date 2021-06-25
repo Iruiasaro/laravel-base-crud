@@ -7,27 +7,39 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: black;
+    color: yellow;
 }
 
 .wrapper {
     text-align: center;
-    color: red;
+    color: yellow;
     font-size: 26px;
+    padding: 50px;
+    list-style: none;
+
+}
+
+.wrapper nav ul {
+    list-style: none;
+    color: yellow;
 }
 
 .wrapper nav ul li a{
     text-decoration: none;
+    color: yellow;
+    list-style-type: none;
 }
 
 .wrapper_result{
     text-align: center;
-    color: red;
+    color: yellow;
 
 }
 
 .wrapper_add {
     margin-top: 30px;
     text-align: center;
+    color: yellow;
 }
 
 .wrapper_add li {
@@ -37,12 +49,50 @@ body {
 .wrapper_add li a {
     font-size: 30px;
     text-decoration-line: none;
-    color: red;
+    color:yellow;
+
+}
+
+.wrapper input {
+    margin-top:10px;
+    background-color:yellow;
+    color:green;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.wrapper li {
+    margin-bottom: 19px;
 }
 
 .wrap_edit {
     margin-top: 10px;
 }
 .wrap_edit a {
-    color:green;;
+    color:green;
+    text-decoration-line: none;
+}
+
+.wrap_edit button {
+    margin-top:10px;
+    background-color:yellow;
+    color:green;
+    padding: 20px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.wrap_edit form input {
+    margin-top:10px;
+    background-color:yellow;
+    color:green;
+    padding: 20px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.wrapper li a {
+    color: yellow;
+    text-decoration-line: none;
 }

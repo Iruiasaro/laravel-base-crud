@@ -90,11 +90,11 @@ class ComicController extends Controller
     {
         $request->validate([
             "title" => "required|max:50",
-            "description" =>"required|max:255",
+            "description" =>"max:255",
             "series" => "max:100",
             "price" => "numeric|max:5",
             "sale_date" => "date",
-            "type" => "required|max:20",
+            "type" => "max:20",
         ]);
 
         $comic = Comic::findorFail($id);
