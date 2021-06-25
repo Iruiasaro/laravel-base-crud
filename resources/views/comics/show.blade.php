@@ -35,6 +35,10 @@
             <li>Description: {{ $comic->description }}</li>
             <li>Type: {{ $comic->type }}</li>
         </ul>
+
+        <div class="wrap_edit">
+            <a href="{{ route('comics.edit', ['id' => $comic->id]) }}">Comic Modify</a>
+        </div>
     </div>    
     
     </main>

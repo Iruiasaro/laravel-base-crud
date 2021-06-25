@@ -39,3 +39,10 @@ body {
     text-decoration-line: none;
     color: red;
 }
+
+.wrap_edit {
+    margin-top: 10px;
+}
+.wrap_edit a {
+    color:green;;
+}
